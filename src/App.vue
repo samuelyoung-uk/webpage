@@ -1,21 +1,22 @@
 <template>
   <div>
-    <Header></Header>
-    <Main></Main>
+    <Header/>
+    <Hero/>
+    <Work/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
 import Header from "./components/Header.vue";
-import Main from "./components/sections/Main.vue";
+import Hero from "./components/sections/Hero.vue";
+import Work from "./components/sections/Work.vue";
 
 @Component({
   components: {
-    HelloWorld,
     Header,
-    Main
+    Hero,
+    Work
   },
 })
 export default class App extends Vue {}
@@ -27,8 +28,12 @@ export default class App extends Vue {}
   * {
     margin: 0;
   }
+  html {
+    font-size: 10px;
+  }
   body {
     height: 100vh;
+    font-family: 'Montserrat Alternates', sans-serif;
   }
   ul {
     list-style-type: none;
@@ -37,5 +42,18 @@ export default class App extends Vue {}
   }
   a {
     text-decoration: none;
+  }
+
+  
+  @media only screen and (min-width: 800px) {
+    html {
+      font-size: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    html {
+      font-size: 20px;
+    }
   }
 </style>
