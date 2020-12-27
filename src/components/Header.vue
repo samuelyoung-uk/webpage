@@ -1,28 +1,29 @@
 <template>
   <header>
-    <div class="main-header">
-      <p class="title">Samuel Young</p>
-      <nav>
+    <div class="header-spacer"></div>
+    <div class="header-fixer">
+      <div class="main-header">
+        <p class="title">Samuel Young</p>
+        <nav>
+          <ul>
+            <li>My Work</li>
+            <li>My Skills</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="social-header">
         <ul>
-          <li>My Work</li>
-          <li>My Skills</li>
+          <li>#</li>
         </ul>
-      </nav>
+      </div>
     </div>
-    <div class="social-header">
-      <ul>
-        <li>#</li>
-      </ul>
-    </div>
-    <section class="start">
-      <p class="title">You Name It</p>
-      <p class="subtitle">Samuel Young - Full Stack Uni Student</p>
-    </section>
   </header>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
 export default class Header extends Vue {}
 </script>
 
@@ -30,49 +31,57 @@ export default class Header extends Vue {}
   @import '../variables';
 
   header {
-    height: 63px;
-    margin: 0;
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-align: center;
-    display: grid;
-    justify-content: stretch;
+    height: 6.3rem;
+    position: relative;
 
+    .header-fixer {
+      position: fixed;
+      width: 100%;
+      height: 6.7rem;
+      margin: 0;
+      text-align: center;
+      display: grid;
+      justify-content: stretch;
+      z-index: 1;
+    }
+    
     .main-header {
-      padding: 1em;
+      padding: 1.6rem;
       display: flex;
       width: auto;
-      background-image: url("../assets/header.png");
+      background-image: url("../assets/header.svg");
+      background-size: auto 100%;
       justify-content: space-between;
+      align-items: center;
 
       .title {
         font-weight: bold;
-        font-size: 18px;
+        font-size: 1.5rem;
         color: $accent-dark;
+        padding-bottom: 0.5rem;
       }
 
       ul {
         display: flex;
-        gap: 1em;
-        font-size: 16px;
+        gap: 1.6rem;
+        font-size: 1.5rem;
         color: $accent-dark;
+        padding-bottom: 0.5rem;
       }
     }
 
     .social-header {
       display: none;
-      background-image: url("../assets/header-dark.png");
+      background-image: url("../assets/header-dark.svg");
+      background-size: auto 100%;
     }
   }
 
-  .start {
-    height: 800px;
-    background-color: $main-dark;
-  }
-
   @media only screen and (min-width: 800px) {
-    header {
+    .header-fixer {
       grid-template-columns: 66% 33%;
       grid-template-rows: 1;
+      
       .main-header {
         grid-column: 1;
         grid-row: 1;
