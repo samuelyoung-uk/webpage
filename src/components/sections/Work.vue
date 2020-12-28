@@ -1,10 +1,12 @@
 <template>
     <div class="work">
-        <h1>My Work</h1>
+        <Title/>
         <div class="card-holder">
             <div class="card">
                 <h1>Large Scale Java Application</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto corrupti nisi autem? Dolore quia vero, ullam architecto praesentium saepe placeat, illo ratione nisi provident odio reiciendis unde labore corrupti! Eius.</p>
+                <p>
+                    Wrote and maintained a large scale modification for a video game.
+                </p>
                 <img src="../../assets/graphic-blocks.svg" alt="Block Graphic">
             </div>
             <div class="card">
@@ -23,22 +25,23 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import Title from '../Title.vue';
 
-@Component
-export default class Header extends Vue {}
+@Component({
+    components: {
+        Title
+    }
+})
+export default class Work extends Vue {}
 </script>
 
 <style lang="scss" scoped>
 @import '../../variables';
 
-h1, p {
-    text-align: center;
-}
-
 .card-holder {
-    margin: 5em;
+    margin: 5rem;
     display: grid;
-    gap: 4em;
+    gap: 4rem;
     justify-items: center;
 
     .card {
@@ -49,6 +52,10 @@ h1, p {
         display: grid;
         width: 100%;
         grid-gap: 1em;
+
+        h1, p {
+            text-align: center;
+        }
     }
 }
 
