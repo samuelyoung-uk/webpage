@@ -1,6 +1,6 @@
 <template>
     <div class="work">
-        <Title/>
+        <Title text="My Work"/>
         <div class="card-holder">
             <div class="card">
                 <h1>Large Scale Java Application</h1>

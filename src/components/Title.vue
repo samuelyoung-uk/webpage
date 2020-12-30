@@ -1,11 +1,15 @@
 <template>
-    <h1>My Work</h1>
+    <h1>{{text}}</h1>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+    props: [
+        'text'
+    ]
+})
 export default class Title extends Vue {}
 </script>
 
