@@ -3,6 +3,7 @@
     <Header/>
     <Hero/>
     <Work/>
+    <skills/>
   </div>
 </template>
 
@@ -11,12 +12,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import Header from "./components/Header.vue";
 import Hero from "./components/sections/Hero.vue";
 import Work from "./components/sections/Work.vue";
+import Skills from "./components/sections/Skills.vue";
 
 @Component({
   components: {
     Header,
     Hero,
-    Work
+    Work,
+    Skills
   },
 })
 export default class App extends Vue {}
