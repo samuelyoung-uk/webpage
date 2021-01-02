@@ -15,12 +15,11 @@ export default class Title extends Vue {}
 
 <style lang="scss" scoped>
     h1 {
-        margin-left: 5rem;
-        margin-right: 5rem;
         display: inline;
         text-align: center;
         margin-top: 5rem;
-        font-size: 4rem;
+        margin-bottom: 2rem;
+        font-size: 3rem;
         display: flex;
         justify-content: space-between;
     }
