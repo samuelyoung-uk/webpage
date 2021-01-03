@@ -38,93 +38,96 @@ export default class Work extends Vue {}
 <style lang="scss" scoped>
 @import '../../variables';
 
-.card-holder {
+.work {
     margin: 5rem;
-    display: grid;
-    gap: 4rem;
-    justify-items: center;
-
-    .card {
-        padding: 1em;
-        background-image: url("../../assets/graphic-bg.svg");
-        background-position: center;
-        border: 0.5em $main-dark solid;
+    
+    .card-holder {
         display: grid;
-        width: 100%;
-        grid-gap: 1em;
-
-        h1, p {
-            text-align: center;
-        }
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .card-holder {
-        margin: 2em;
+        gap: 4rem;
+        justify-items: center;
 
         .card {
-            grid-template-columns: auto 8em;
+            padding: 1em;
+            background-image: url("../../assets/graphic-bg.svg");
+            background-position: center;
+            border: 0.5em $main-dark solid;
+            display: grid;
+            width: 100%;
+            grid-gap: 1em;
 
             h1, p {
-                grid-column: 1;
-                text-align: left;
-            }
-
-            img {
-                grid-row: 1 / 3;
-                grid-column: 2;
-                width: 6em;
-                margin: auto;
+                text-align: center;
             }
         }
-        
-        .card:nth-child(even) {
-            grid-template-columns: 8em auto;
-            text-align: right;
+    }
 
-            h1, p {
-                grid-column: 2;
+    @media only screen and (max-width: 800px) {
+        .card-holder {
+            margin: 2em;
+
+            .card {
+                grid-template-columns: auto 8em;
+
+                h1, p {
+                    grid-column: 1;
+                    text-align: left;
+                }
+
+                img {
+                    grid-row: 1 / 3;
+                    grid-column: 2;
+                    width: 6em;
+                    margin: auto;
+                }
+            }
+            
+            .card:nth-child(even) {
+                grid-template-columns: 8em auto;
                 text-align: right;
-            }
 
-            img {
-                grid-row: 1 / 3;
-                grid-column: 1;
-                height: auto;
-                margin:auto;
+                h1, p {
+                    grid-column: 2;
+                    text-align: right;
+                }
+
+                img {
+                    grid-row: 1 / 3;
+                    grid-column: 1;
+                    height: auto;
+                    margin:auto;
+                }
             }
         }
     }
-}
 
-@media only screen and (min-width: 800px) {
-    .card-holder {
-        display: flex;
-        justify-content: space-between;
+    @media only screen and (min-width: 800px) {
+        .card-holder {
+            display: flex;
+            justify-content: space-between;
 
-        .card {
-            img {
-                height: 8em;
-                margin: auto;
+            .card {
+                img {
+                    height: 8em;
+                    margin: auto;
+                }
+
+                h1 {
+                    align-self: end;
+                }
             }
 
-            h1 {
-                align-self: end;
-            }
-        }
+            .card:nth-child(even) {
+                h1 {
+                    grid-row: 2;
+                }
 
-        .card:nth-child(even) {
-            h1 {
-                grid-row: 2;
-            }
+                p {
+                    grid-row: 3;
+                }
 
-            p {
-                grid-row: 3;
-            }
-
-            img {
-                grid-row: 1;
+                img {
+                    grid-row: 1;
+                }
             }
         }
     }
