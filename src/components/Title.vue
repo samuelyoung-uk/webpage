@@ -1,19 +1,37 @@
 <template>
-    <h1>{{text}}</h1>
+    <h1 ref="title" class="animtitle">{{text}}</h1>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
     props: [
         'text'
-    ]
+    ],
 })
-export default class Title extends Vue {}
+export default class Title extends Vue {
+    mounted() {
+        // const tl = new TimelineMax();
+        const title = this.$refs.title as Element;
+        gsap.from(title,{
+            scrollTrigger: {
+                trigger: title,
+                toggleActions: "restart none restart none"
+            },
+            opacity: 0,
+            duration: 1
+        });
+    }
+}
 </script>
 
 <style lang="scss" scoped>
+    @import '@animxyz/core';
+
     h1 {
         display: inline;
         text-align: center;
@@ -41,4 +59,8 @@ export default class Title extends Vue {}
         width: 4.8rem;
         background-size: 100% 100%;
     }
+
+    .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
 </style>
