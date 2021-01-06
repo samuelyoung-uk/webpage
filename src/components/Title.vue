@@ -19,7 +19,7 @@ export default class Title extends Vue {
         gsap.from(title,{
             scrollTrigger: {
                 trigger: title,
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none none none"
             },
             opacity: 0,
             duration: 1

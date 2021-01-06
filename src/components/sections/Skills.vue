@@ -30,7 +30,7 @@ export default class Skills extends Vue {
             gsap.from(skill,{
                 scrollTrigger: {
                     trigger: skill,
-                    toggleActions: "restart none restart none"
+                    toggleActions: "restart none none none"
                 },
                 opacity: 0,
                 duration: 2

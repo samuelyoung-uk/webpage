@@ -32,7 +32,7 @@ export default class Work extends Vue {
             gsap.from(card,{
                 scrollTrigger: {
                     trigger: card,
-                    toggleActions: "restart none restart none"
+                    toggleActions: "restart none none none"
                 },
                 opacity: 0,
                 duration: 2
