@@ -1,5 +1,6 @@
 <template>
-    <section class="skills" id="skills">
+    <section class="skills">
+        <div class="ref-fixer" id="skills"></div>
         <Title text="My Skills"/>
         <div class="skills-holder">
             <div class="skill-card" ref="skill" v-for="link in links" :key="link.src">
@@ -45,6 +46,11 @@ export default class Skills extends Vue {
 
 .skills {
     margin: 5rem;
+
+    .ref-fixer {
+        position: relative;
+        top: -10rem;
+    }
 
     .skills-holder {
         display: flex;

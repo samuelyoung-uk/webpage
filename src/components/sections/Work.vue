@@ -1,5 +1,6 @@
 <template>
-    <section class="work" id="work">
+    <section class="work">
+        <div class="ref-fixer" id="work"></div>
         <Title text="My Work"/>
         <div class="card-holder">
             <div ref="card" class="card" v-for="card in work" :key="card.src">
@@ -47,6 +48,11 @@ export default class Work extends Vue {
 
 .work {
     margin: 5rem;
+
+    .ref-fixer {
+        position: relative;
+        top: -10rem;
+    }
     
     .card-holder {
         display: grid;
