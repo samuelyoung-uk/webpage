@@ -1,0 +1,65 @@
+[
+    {
+        "href": "https://www.java.com",
+        "src": "java"
+    },
+    {
+        "href": "https://www.javascript.com",
+        "src": "javascript"
+    },
+    {
+        "href": "https://www.typescriptlang.org/",
+        "src": "typescript"
+    },
+    {
+        "src": "c"
+    },
+    {
+        "href": "https://isocpp.org/",
+        "src": "c++"
+    },
+    {
+        "href": "http://www.csharp.net",
+        "src": "csharp"
+    },
+    {
+        "href": "https://www.python.org/",
+        "src": "python"
+    },
+    {
+        "href": "https://www.gnu.org/software/bash/",
+        "src": "bash"
+    },
+    {
+        "href": "https://dotnet.microsoft.com/",
+        "src": "dotnet"
+    },
+    {
+        "href": "https://gradle.org/",
+        "src": "gradle"
+    },
+    {
+        "href": "https://www.electronjs.org/",
+        "src": "electron"
+    },
+    {
+        "href": "https://angular.io/",
+        "src": "angular"
+    },
+    {
+        "href": "https://vuejs.org/",
+        "src": "vue"
+    },
+    {
+        "href": "https://git-scm.com/",
+        "src": "git"
+    },
+    {
+        "href": "https://www.opengl.org",
+        "src": "opengl"
+    },
+    {
+        "href": "https://cmake.org/",
+        "src": "cmake"
+    }
+]

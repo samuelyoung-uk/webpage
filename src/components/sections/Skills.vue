@@ -2,7 +2,7 @@
     <div class="skills">
         <Title text="My Skills"/>
         <div class="skills-holder">
-            <div class="skill-card" v-for="link in links" :key="link.src">
+            <div class="skill-card" ref="skill" v-for="link in links" :key="link.src">
                 <a :href="link.href" target="_blank"><img :src="require(`../../assets/logos/${link.src}.svg`)" :alt="link.src"/></a>
             </div>
         </div>
@@ -12,6 +12,9 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Title from '../Title.vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
     components: {
@@ -19,71 +22,21 @@ import Title from '../Title.vue';
     }
 })
 export default class Skills extends Vue {
-    links: {href?: string; src: string}[] = [
-        {
-            href: "https://www.java.com",
-            src: "java"
-        },
-        {
-            href: "https://www.javascript.com",
-            src: "javascript"
-        },
-        {
-            href: "https://www.typescriptlang.org/",
-            src: "typescript"
-        },
-        {
-            src: "c"
-        },
-        {
-            href: "https://isocpp.org/",
-            src: "c++"
-        },
-        {
-            href: "http://www.csharp.net",
-            src: "csharp"
-        },
-        {
-            href: "https://www.python.org/",
-            src: "python"
-        },
-        {
-            href: "https://www.gnu.org/software/bash/",
-            src: "bash"
-        },
-        {
-            href: "https://dotnet.microsoft.com/",
-            src: "dotnet"
-        },
-        {
-            href: "https://gradle.org/",
-            src: "gradle"
-        },
-        {
-            href: "https://www.electronjs.org/",
-            src: "electron"
-        },
-        {
-            href: "https://angular.io/",
-            src: "angular"
-        },
-        {
-            href: "https://vuejs.org/",
-            src: "vue"
-        },
-        {
-            href: "https://git-scm.com/",
-            src: "git"
-        },
-        {
-            href: "https://www.opengl.org",
-            src: "opengl"
-        },
-        {
-            href: "https://cmake.org/",
-            src: "cmake"
+    links: {href?: string; src: string}[] = require("../../assets/skills.json");
+
+    mounted() {
+        const skills = this.$refs.skill as Element[];
+        for (const skill of skills) {
+            gsap.from(skill,{
+                scrollTrigger: {
+                    trigger: skill,
+                    toggleActions: "restart none restart none"
+                },
+                opacity: 0,
+                duration: 2
+            });
         }
-    ]
+    }
 }
 </script>
 

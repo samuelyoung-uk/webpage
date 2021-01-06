@@ -1,0 +1,22 @@
+[
+    {
+        "title" : "Large Scale Java Application",
+        "src" : "graphic-blocks",
+        "alt" : "Block Graphic",
+        "desc" : "Repellendus ad voluptatem tenetur ea debitis consequatur dignissimos, impedit deleniti labore quasi, in, temporibus recusandae non quisquam maxime. Similique ipsam nam modi eius exercitationem provident, incidunt tenetur et distinctio quae?"
+    },
+
+    {
+        "title" : "Online Verification Flow",
+        "src" : "graphic-shield",
+        "alt" : "Sheild Graphic",
+        "desc" : "Repellendus ad voluptatem tenetur ea debitis consequatur dignissimos, impedit deleniti labore quasi, in, temporibus recusandae non quisquam maxime. Similique ipsam nam modi eius exercitationem provident, incidunt tenetur et distinctio quae?"
+    },
+
+    {
+        "title" : "Backend NoSQL database & release manager",
+        "src" : "graphic-server",
+        "alt" : "Server Graphic",
+        "desc" : "Repellendus ad voluptatem tenetur ea debitis consequatur dignissimos, impedit deleniti labore quasi, in, temporibus recusandae non quisquam maxime. Similique ipsam nam modi eius exercitationem provident, incidunt tenetur et distinctio quae?"
+    }
+]

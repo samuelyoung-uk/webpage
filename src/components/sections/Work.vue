@@ -2,23 +2,11 @@
     <div class="work">
         <Title text="My Work"/>
         <div class="card-holder">
-            <div class="card">
-                <h1>Large Scale Java Application</h1>
-                <p>
-                    Wrote and maintained a large scale modification for a video game.
-                </p>
-                <img src="../../assets/graphic-blocks.svg" alt="Block Graphic">
-            </div>
-            <div class="card">
-                <h1>Online Verification Flow</h1>
-                <p>Repellendus ad voluptatem tenetur ea debitis consequatur dignissimos, impedit deleniti labore quasi, in, temporibus recusandae non quisquam maxime. Similique ipsam nam modi eius exercitationem provident, incidunt tenetur et distinctio quae?</p>
-                <img src="../../assets/graphic-shield.svg" alt="Shield Graphic">
-            </div>
-            <div class="card">
-                <h1>Backend NoSQL database &amp; release manager</h1>
-                <p>Quaerat at sit minus corporis nisi suscipit repellendus laborum, dolorem illo dolores beatae eligendi natus, ullam voluptatum modi nobis magnam soluta quas magni tenetur ut enim, quis et. Nam, accusamus.</p>
-                <img src="../../assets/graphic-server.svg" alt="Server Graphic">
-            </div>
+            <div ref="card" class="card" v-for="card in work" :key="card.src">
+                <h1>{{card.title}}</h1>
+                <p>{{card.desc}}</p>
+                <img :src="require(`../../assets/${card.src}.svg`)" :alt="card.alt"/>
+             </div>
         </div>
     </div>
 </template>
@@ -26,13 +14,32 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Title from '../Title.vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
     components: {
         Title
     }
 })
-export default class Work extends Vue {}
+export default class Work extends Vue {
+    work = require("../../assets/work.json");
+
+    mounted() {
+        const cards = this.$refs.card as Element[];
+        for (const card of cards) {
+            gsap.from(card,{
+                scrollTrigger: {
+                    trigger: card,
+                    toggleActions: "restart none restart none"
+                },
+                opacity: 0,
+                duration: 2
+            });
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
