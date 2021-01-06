@@ -1,5 +1,5 @@
 <template>
-    <div class="work">
+    <section class="work" id="work">
         <Title text="My Work"/>
         <div class="card-holder">
             <div ref="card" class="card" v-for="card in work" :key="card.src">
@@ -8,7 +8,7 @@
                 <img :src="require(`../../assets/${card.src}.svg`)" :alt="card.alt"/>
              </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script lang="ts">

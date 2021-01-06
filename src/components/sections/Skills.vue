@@ -1,12 +1,12 @@
 <template>
-    <div class="skills">
+    <section class="skills" id="skills">
         <Title text="My Skills"/>
         <div class="skills-holder">
             <div class="skill-card" ref="skill" v-for="link in links" :key="link.src">
                 <a :href="link.href" target="_blank"><img :src="require(`../../assets/logos/${link.src}.svg`)" :alt="link.src"/></a>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script lang="ts">

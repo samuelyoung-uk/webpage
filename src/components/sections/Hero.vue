@@ -9,8 +9,8 @@
                 <img src="../../assets/graphic-down.svg" alt="arrow down" class="left">
                 <img src="../../assets/graphic.svg" alt="emblem" class="middle">
                 <img src="../../assets/graphic-down.svg" alt="arrow down" class="right">
-                <a href="#" class="left">My Work</a>
-                <a href="#" class="right">My Skills</a>
+                <a href="#work" class="left">My Work</a>
+                <a href="#skills" class="right">My Skills</a>
             </nav>
         </div>
         <div class="side">

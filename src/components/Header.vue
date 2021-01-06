@@ -6,8 +6,8 @@
         <p class="title">Samuel Young</p>
         <nav>
           <ul>
-            <li>My Work</li>
-            <li>My Skills</li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#skills">My Skills</a></li>
           </ul>
         </nav>
       </div>
@@ -67,6 +67,10 @@ export default class Header extends Vue {}
         font-size: 1.5rem;
         color: $accent-dark;
         padding-bottom: 0.5rem;
+      }
+
+      a {
+        color: $accent-med;
       }
     }
 
