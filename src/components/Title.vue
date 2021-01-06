@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export default class Title extends Vue {
     mounted() {
-        // const tl = new TimelineMax();
         const title = this.$refs.title as Element;
         gsap.from(title,{
             scrollTrigger: {
@@ -30,8 +29,6 @@ export default class Title extends Vue {
 </script>
 
 <style lang="scss" scoped>
-    @import '@animxyz/core';
-
     h1 {
         display: inline;
         text-align: center;
