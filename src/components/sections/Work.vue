@@ -5,7 +5,7 @@
         <div class="card-holder">
             <div ref="card" class="card" v-for="card in work" :key="card.src">
                 <h1>{{card.title}}</h1>
-                <p>{{card.desc}}</p>
+                <p v-html="card.desc"></p>
                 <img :src="require(`../../assets/${card.src}.svg`)" :alt="card.alt"/>
              </div>
         </div>

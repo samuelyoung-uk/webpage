@@ -3,20 +3,20 @@
         "title" : "Large Scale Java Application",
         "src" : "graphic-blocks",
         "alt" : "Block Graphic",
-        "desc" : "Repellendus ad voluptatem tenetur ea debitis consequatur dignissimos, impedit deleniti labore quasi, in, temporibus recusandae non quisquam maxime. Similique ipsam nam modi eius exercitationem provident, incidunt tenetur et distinctio quae?"
+        "desc" : "Designed and implemented a Java + Gradle modification for a video game. Identified a problem and researched methods in order to solve it. Interfaced with a large existing codebase to provide improvements. Designed branding and a <a href='https://dfplusplus.github.io/webpage' target='_blank'>website</a> for the product. Gathered and implemented feedback from a large active userbase. Wrote several bash scripts to automate the build process & produce library agnostic code."
     },
 
     {
         "title" : "Online Verification Flow",
         "src" : "graphic-shield",
         "alt" : "Sheild Graphic",
-        "desc" : "Repellendus ad voluptatem tenetur ea debitis consequatur dignissimos, impedit deleniti labore quasi, in, temporibus recusandae non quisquam maxime. Similique ipsam nam modi eius exercitationem provident, incidunt tenetur et distinctio quae?"
+        "desc" : "Wrote for a client a <a href='https://kes-esports-verification.herokuapp.com/' target='_blank'>verification flow</a> for verifying the Discord accounts for my school's eSports team. Wrote using Angular with the Nebular component library. Interfaces with a RabbitMQ queue broker backend to handle requests from the webpage, and uses a NoSQL database to store information. School went on to use this system."
     },
 
     {
         "title" : "Backend NoSQL database & release manager",
         "src" : "graphic-server",
         "alt" : "Server Graphic",
-        "desc" : "Repellendus ad voluptatem tenetur ea debitis consequatur dignissimos, impedit deleniti labore quasi, in, temporibus recusandae non quisquam maxime. Similique ipsam nam modi eius exercitationem provident, incidunt tenetur et distinctio quae?"
+        "desc" : "For the above Java application, a release manager was needed. Implemented this using Firebase file hosting & a firestore NoSQL database. All releases can be accessed online in an orderly webpage. Releases are uploaded automatically using a script, reducing human interaction."
     }
 ]
