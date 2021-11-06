@@ -27,6 +27,22 @@
         "src": "python"
     },
     {
+        "href": "https://www.haskell.org/",
+        "src": "haskell"
+    },
+    {
+        "href": "https://kotlinlang.org/",
+        "src": "kotlin"
+    },
+    {
+        "href": "https://fsharp.org/",
+        "src": "fsharp"
+    },
+    {
+        "href": "https://www.rust-lang.org/",
+        "src": "rust"
+    },
+    {
         "href": "https://www.gnu.org/software/bash/",
         "src": "bash"
     },
